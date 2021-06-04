@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import noteService from './services/notes'
 import './App.css';
 
 function App(props) {
@@ -7,18 +7,13 @@ function App(props) {
   const [notes, setNotes] = useState([]);
   const [newNote, setNewNote] = useState(''); 
   const [showAll, setShowAll] = useState(true);
+  const [errorMessage, setErrorMessage] = useState('some error happened...')
 
   useEffect(() => {
-    console.log('effect')
-    axios
-      .get('http://localhost:3001/notes')
-      .then(response => {
-        console.log('promise fulfilled')
-        setNotes(response.data)
-      })
+    noteService.getAll().then(initialNotes => {
+      setNotes(initialNotes)
+    });
   }, [])
-
-  //console.log('render', notes.length, 'notes')
  
   const addNote = (event) => {
     event.preventDefault()
@@ -30,13 +25,10 @@ function App(props) {
       id: notes.length + 1,
     }
   
-    axios
-    .post('http://localhost:3001/notes', noteObject)
-    .then(response => {
-      //console.log(response)
-      setNotes(notes.concat(noteObject))
-      setNewNote('')
-    })
+    noteService.create(noteObject).then(returnedNote => {
+      setNotes(notes.concat(returnedNote));
+      setNewNote("");
+    });
   }
   
   const handleNoteChange = (event) => {
@@ -44,23 +36,90 @@ function App(props) {
     setNewNote(event.target.value)
   }
 
+  // ********************************************************************************
+  const toggleImportanceOf = id => {
+    const note = notes.find(n => n.id === id)
+    const changedNote = { ...note, important: !note.important }
+  
+    noteService.update(id, changedNote).then(returnedNote => {
+      setNotes(notes.map(note => note.id !== id ? note : returnedNote))
+    })
+    .catch(error => {
+      setErrorMessage(
+        `Note '${note.content}' was already removed from server`
+      )
+      setTimeout(() => {
+        setErrorMessage(null)
+      }, 5000)
+      setNotes(notes.filter(n => n.id !== id))
+    })
+  }
+ // ********************************************************************************
+
+  // Definicion del Componente Note
+  const Note = ({ note, toggleImportance }) => {
+    const label = note.important
+      ? 'make not important' : 'make important'
+  
+    return (
+      <li className='note'>
+        {note.content} 
+        <button onClick={toggleImportance}>{label}</button>
+      </li>
+    )
+  }
+
   const notesToShow = showAll ? notes : notes.filter(note => note.important === true)
-    console.log(notesToShow)
+
+// ********************************************************************************
+  const Notification = ({ message }) => {
+    if (message === null) {
+      return null
+    }
+  
+    return (
+      <div className="error">
+        {message}
+      </div>
+    )
+  }
+// ********************************************************************************
+
+ // ********************************************************************************
+  const Footer = () => {
+    const footerStyle = {
+      color: 'green',
+      fontStyle: 'italic',
+      fontSize: 16
+    }
+  
+    return (
+      <div style={footerStyle}>
+        <br />
+        <em>Note app, Department of Computer Science, University of Helsinki 2021</em>
+      </div>
+    )
+  }
+ // ********************************************************************************
+
   return (
     
     <div>
       <h1>Notes</h1>
+      <Notification message={errorMessage} />
       <div>
         <button onClick={() => setShowAll(!showAll)}>
           show {showAll ? 'important' : 'all' }
         </button>
       </div>  
       <ul>
-       {notesToShow.map( note => 
-          <li key={note.id}> 
-              {note.content}
-          </li>
-       )}
+      {notesToShow.map(note => 
+          <Note
+            key={note.id}
+            note={note} 
+            toggleImportance={() => toggleImportanceOf(note.id)}
+          />
+        )}
       </ul>
       <form onSubmit={addNote}>
         <input 
@@ -69,6 +128,7 @@ function App(props) {
         />
         <button type="submit">save</button>
       </form>   
+      <Footer />
     </div>
   )
 }

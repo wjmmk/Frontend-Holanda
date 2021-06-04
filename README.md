@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# Comenzar con la aplicación de reacción Crear
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto fue bloqueado con [crear la aplicación de reacción] (https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Scripts disponibles
 
-In the project directory, you can run:
+En el directorio del proyecto, puede ejecutar:
 
-### `yarn start`
+### `inicio de hilo`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Ejecuta la aplicación en el modo de desarrollo. \
+Abra [http: // localhost: 3000] (http: // localhost: 3000) para verlo en el navegador.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+La página se volverá a cargar si haces ediciones. \
+También verá cualquier error de pelusa en la consola.
 
-### `yarn test`
+### `Prueba de hilo`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Lanza el corredor de prueba en el modo de reloj interactivo. \
+Consulte la sección sobre [Ejecutar pruebas] (https://facebook.github.io/create-react-app/docs/running-tests) para obtener más información.
 
-### `yarn build`
+### `hilado construir`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Construye la aplicación para la producción a la carpeta 'Build`. \
+Los paquetes correctos reaccionan en el modo de producción y optimiza la compilación para el mejor rendimiento.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+La construcción se modifica y los nombres de archivo incluyen los hashes. \
+¡Tu aplicación está lista para ser desplegada!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Consulte la sección sobre [Implementación] (https://facebook.github.io/create-react-app/docs/deployment) para obtener más información.
 
-### `yarn eject`
+### 'hilado expulsar`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+** Nota: Esta es una operación de un solo sentido. Una vez que se "expulsa", ¡no puedes volver! **
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Si no está satisfecho con la herramienta de construcción y las opciones de configuración, puede "expulsar" en cualquier momento. Este comando eliminará la dependencia de una sola construcción de su proyecto.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+En su lugar, copiará todos los archivos de configuración y las dependencias transitivas (WebPack, Babel, Eslint, etc.) directamente en su proyecto para que tenga control total sobre ellos. Todos los comandos, excepto "Expulsar, seguirán funcionando, pero señalarán a los scripts copiados para que pueda modificarlos. En este punto estás por tu cuenta.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+No tienes que usar "expulsar". El conjunto de características curadas es adecuado para implementaciones pequeñas y medias, y no debe sentirse obligado a usar esta función. Sin embargo, entendemos que esta herramienta no sería útil si no pudiera personalizarlo cuando esté listo para ello.
 
-## Learn More
+## Aprende más
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Puede obtener más información en la [Crear documentación de la aplicación de reacción] (https://facebook.github.io/create-reaact-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Para aprender reaccionar, revise la [Documentación de reacción] (https://reactjs.org/).
 
-### Code Splitting
+### Distribución de código
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Esta sección se ha movido aquí: [https://facebook.github.io/create-reaact-apt/docs/code-splitting◆(https://facebook.github.io/create-reacact-app/docs/code- terrible)
 
-### Analyzing the Bundle Size
+### analizando el tamaño del paquete
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Esta sección se ha movido aquí: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size◆(https://facebook.github.io/create-react-app/ Docs / Analizando el tamaño del paquete)
 
-### Making a Progressive Web App
+### Haciendo una aplicación web progresiva
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Esta sección se ha movido aquí: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app◆(https://facebook.github.io/create-reacct- APP / DOCS / FACKING-A-Progressive-Web-Aplicación)
 
-### Advanced Configuration
+### Configuración avanzada
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Esta sección se ha movido aquí: [https://facebook.github.io/create-react-app/docs/advanced-configuration◆(https://facebook.github.io/create-reacact-app/docs/advanced- configuración)
 
-### Deployment
+### implementación
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Esta sección se ha movido aquí: [https://facebook.github.io/create-react-app/docs/deployment◆(https://facebook.github.io/create-react-app/docs/deployment)
 
-### `yarn build` fails to minify
+### `Hilados de construcción 'no puede minificar
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Esta sección se ha movido aquí: [https://facebook.github.io/create-react-app/docs/troubleshoting#npm-run-build-fails-a-minify-(https://facebook.github.io/ CREATE-REACT-APP / DOCS / SOLUCIÓN DE PROBLEMAS # NPM-RUN-BUILT-FALSE-MINIFY)

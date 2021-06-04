@@ -33,7 +33,7 @@
     {
       "content": "Como es pues",
       "date": "2021-05-28T15:52:09.059Z",
-      "important": false,
+      "important": true,
       "id": 6
     },
     {
@@ -41,6 +41,12 @@
       "date": "2021-05-28T15:52:43.971Z",
       "important": true,
       "id": 7
+    },
+    {
+      "content": "Les't Go",
+      "date": "2021-06-03T19:07:00.099Z",
+      "important": true,
+      "id": 8
     }
   ]
 }
