@@ -44,7 +44,7 @@
 }
 
 .error {
-  color: red;
+  color: rgb(4, 82, 49);
   background: lightgrey;
   font-size: 20px;
   border-style: solid;
