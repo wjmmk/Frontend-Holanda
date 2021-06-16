@@ -70,7 +70,6 @@ const App = () => {
   const handleLogin = async (event) => {
     event.preventDefault()
     console.log('logging in with', username, password)
-    console.log(user);
     try {
       const user = await loginService.login({
         username, password
@@ -90,7 +89,7 @@ const App = () => {
   const loginForm = () => (
     <form onSubmit={handleLogin}>
       <div>
-        username
+        username:
           <input
           type="text"
           value={username}
@@ -99,7 +98,7 @@ const App = () => {
         />
       </div>
       <div>
-        password
+        password:
           <input
           type="password"
           value={password}
@@ -126,9 +125,14 @@ const App = () => {
       <h1>Notes</h1>
       <Notification message={errorMessage} />
       <hr></hr>
-      {user === null && loginForm()}
+        {user === null ?
+          loginForm() :
+          <div>
+           <p>{user.name} logged-in</p>
+              {noteForm()}
+          </div>
+        }
       <hr></hr>
-      {user !== null && noteForm()}
       <div>
         <button onClick={() => setShowAll(!showAll)}>
           show {showAll ? 'important' : 'all' }
